@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shopping Cart</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="cart.css">
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <script src="cart.js" async defer></script>
+<!-- TOP NAV BAR  -->
+        <ul class="topnav" id="menu">
+          <h1 style="float:left;margin:0;padding-right:50px;">Shop Name</h1>
+          <a href="../index.html">Home</a>
+          <a href="../Products/products.html">Products</a>
+           <a href="../Shipping/shipping.html">Shipping & Returns</a>
+            <a href="../Contact/contact.html">Contact</a>
+<!-- SIGNUP LOGIN CART BUTTONS -->
+              <button class="topButton">Signup</button>
+               <button class="topButton" onclick="showLogin()">Login</button>
+              <div class="cart"><a href="#cart.html" class="cart"><img src="https://i.ibb.co/0DkxSzb/cart.png" style="width:40px;height:40px;transform:scaleX(-1);"></a><img src="https://icon-library.com/images/icon-1/icon-1-10.jpg" style="width:20px;height:20px;margin-left:-10px;margin-bottom:5px;transform:scaleZ(1)"></div>
+          </ul> 
+          <!-- HIDDEN LOGIN FORM -->
+               <div id="triangleDiv" style="display:none">
+                <span id="triangle"></span>
+                <div id="box">
+                
+                  <div id="formAlign">
+                    <form id="loginForm">
+                      <input id="username" placeholder="Username">
+                      <input id="password"type="password"placeholder="Password">
+                      <button id="loginFormBtn">Log in</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+{{ content }}
+
+</body>
+</html>

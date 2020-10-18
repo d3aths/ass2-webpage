@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <script src="index.js" async defer></script>
+<!-- TOP NAV BAR  -->
+        <ul class="topnav" id="menu">
+          <h1 style="float:left;margin:0;padding-right:50px;">Shop Name</h1>
+          <div class="bottom-arrow"><a href="#index" class="active">Home</a></div>
+          <a href="Products/products.html">Products</a>
+           <a href="Shipping/shipping.html">Shipping & Returns</a>
+            <a href="Contact/contact.html">Contact</a>
+<!-- SIGNUP LOGIN CART BUTTONS -->
+              <button class="topButton">Signup</button>
+               <button class="topButton" onclick="showLogin()">Login</button>
+              <div class="cart"><a href="../Cart/cart.html" class="cart"><img src="https://i.ibb.co/0DkxSzb/cart.png" style="width:40px;height:40px;transform:scaleX(-1);"></a><img src="https://icon-library.com/images/icon-1/icon-1-10.jpg" style="width:20px;height:20px;margin-left:-10px;margin-bottom:5px;transform:scaleZ(1)"></div>
+          </ul> 
+          <!-- HIDDEN LOGIN FORM -->
+               <div id="triangleDiv" style="display:none">
+                <span id="triangle"></span>
+                <div id="box">
+                
+                  <div id="formAlign">
+                    <form id="loginForm">
+                      <input id="username" placeholder="Username">
+                      <input id="password"type="password"placeholder="Password">
+                      <button id="loginFormBtn">Log in</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+
+<div class="row">
+  <div class="column side">
+    <br><h2><i>FEATURED<br>PRODUCTS</i></h2>
+    <p style="padding-top: 165px;"><img src="https://ae01.alicdn.com/kf/HTB1iQcBXULrK1Rjy0Fjq6zYXFXaS/For-Dota-Frostmourne-Sword-Keycaps-ESC-OEM-Backlight-3D-Backlit-Aluminum-Metal-Keycaps-for-Mechanical-Gaming.jpg_q50.jpg" width="250px" height="250px" style="border:1px solid black;"></p>
+  </div>
+  
+  <div class="column middle">
+    <p>This Novelty Illidan inspired resin hand-painted keycap from World of Warcraft is the product you didn't think you need, but once you have it, something you won't want to live without.<br>
+      <br><i>Betrayer... In truth, it was I who was betrayed. Still, I am hunted. Still, I am hated. Now, my blind eyes see what others cannot: that sometimes the hand of fate must be forced! Now go forth... unleash the tides of Doom... Upon all those...who would oppose us.<br>
+        - Illidan Stormrage</i></p><BR><HR>
+    <p style="padding-top: 50px;">Hand crafted accursed runeblade, Frostmourne keycap is a perfect addition to your other gaming related keys. Will you take up the blade and bend it's powers to your will, or let Frostmourne's whispers into your soul?<br>
+    <br><i>Whomsoever takes up this blade shall wield power eternal. Just as the blade rends flesh, so must power scar the spirit.</i></p>
+  </div>
+  
+  <div class="column side">  
+    <p style="padding-top: 30px;"><img src="https://img.alicdn.com/imgextra/i2/1713761720/O1CN01FjPm9s1OZnnBht2ZC_!!1713761720.jpg" width="250px" height="250px" style="border:1px solid black;"></p>
+  </div>
+</div>
+
+
+    </body>
+</html>

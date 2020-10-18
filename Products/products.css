@@ -1,0 +1,389 @@
+body {
+    background-color: #232323;
+    font-family: 'Alegreya Sans SC';
+    margin: 0;
+}
+
+
+h1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px 5px #0c59cf;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+/*hr needs different attributes set to black for diff browsers to appear correctly*/
+hr {
+  color: black;
+  border-color: black;
+  background-color: black;
+  height: 1.5px;
+  border: 0;
+}
+
+/* code for the topnav starts here*/
+ .topnav {
+    background-color: #232323;
+    overflow: hidden;
+    list-style-type: none;
+    position: sticky;
+    border-bottom: solid 2px black;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a:not(.cart) {
+    float: left;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 36px;
+    text-decoration: none;
+    font-size: 17px;
+    border:  1px solid black;
+    margin-top: 10px;
+    border-bottom: 0px;
+  }
+  
+  .topnav a:not(.cart):hover { /*the not(.cart) part here is to exclude the cart link from this styling*/
+    box-shadow: inset 0 0 12px white;
+    text-shadow: 1px 1px 10px white;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a:not(.cart).active {
+   color: black;
+   background-image: linear-gradient(#444444, #777777);
+  }
+
+  /* makes an element go all jaggedy just thought it was cool to keep
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  */
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  } 
+
+  /* for responsive layout */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav h1 {
+      float: none;
+      width: 70%;
+      margin: auto;
+    }
+  }
+  
+/*styling the signup and login buttons in topnav*/
+  .topButton {
+    margin-left: 4%;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: #444444;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px black;
+    font-family: 'Alegreya Sans SC';
+  }
+  
+  .topButton:hover {background-color: #313131}
+  
+  .topButton:active {
+    background-color: #444444;
+    box-shadow: 0 5px 10px #000;
+    transform: translateY(4px);
+  }
+
+  .topnav img {
+    margin-left:30px;
+    margin-top: -10px;
+    margin-bottom: -15px;
+  }
+
+  .cart {
+    display: inline-block;
+    color: white;
+  }
+
+   /*LOGIN POPUP*/
+   #triangleDiv{
+    width: 300px;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -25px;
+    margin-left: 65%;
+    filter: drop-shadow(2px 2px 5px black);
+  }
+  /*makes the login popup position itself better on resize*/
+  @media screen and (max-width:600px) {
+    #triangleDiv {
+      margin:auto;
+    }
+  }
+  
+  #triangle{
+    width: 0px;
+    height: 0px;
+    border: 20px solid black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    margin-left: 150px;
+        
+  }
+  #box{
+    width: 300px;
+    height: 250px;
+    background: #444444;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  #formAlign{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #loginForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #username{
+    margin-bottom: 30px;
+    height: 30px;
+    width: 210px;
+    border: transparent;
+    color: white;
+    background: #343434;
+    padding-left: 15px;
+    font-family: 'Alegreya Sans';
+    border: 1px solid black;
+  }
+  #password{
+    height: 30px;
+    width: 210px;
+    background: #343434;
+    border: transparent;
+    color: white;
+    padding-left: 15px;
+    font-family: 'Alegreya Sans';
+    border: 1px solid black;
+  }
+  #username, #password{
+    outline: none;
+  }
+
+  #loginFormBtn{
+    margin-top: 30px;
+    height: 35px;
+    width: 75px;
+    border: 1px solid BLACK;
+    filter: drop-shadow(1px 1px 5px black);
+    background: #444444;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Alegreya Sans SC';
+    font-size: 15px;
+  }
+    /*END OF LOGIN
+.
+.
+.
+END OF HEADER*/
+
+/*START OF CONTENT
+.
+.
+*/
+
+/*containers for product grid*/
+.productbox {
+  width: 250px;
+  height: 200px;
+  border: 1px solid black;
+  filter: drop-shadow(1px 1px 5px black);
+  margin: 1.5em;
+  display: inline-block;
+}
+.productbox p {
+  color: white;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  vertical-align: super;
+}
+
+
+/*creates uneven columns for search and grid*/
+.column {
+  float: left;
+  text-align: center;
+}
+.left {
+  width: 20%;
+  text-align: left;
+  justify-content: center;
+}
+
+.right {
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #141414;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+/*styles search box a lil bit*/
+.column input[type=text] {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  border: none;
+  font-size: 15px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+  background-color: #232323;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Alegreya Sans SC';
+}
+
+/* Style the collapsible content, hidden by default */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} 
+
+/*changes icons to show whether open or closed*/
+.collapsible:after {
+  content: '\25BE';
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 45px;
+}
+
+.collapsible.active:after {
+  content: "\25B4";
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*gives cart icon a green color*/
+#cartico {
+  filter: opacity(0.3) drop-shadow(0 0 0 rgb(2, 255, 2));
+}

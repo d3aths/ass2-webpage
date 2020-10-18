@@ -1,0 +1,490 @@
+body {
+    background-color: #232323;
+    font-family: 'Alegreya Sans SC';
+    margin: 0;
+}
+ body p {
+   color: white;
+   font-family: 'Alegreya Sans';
+ }
+
+h1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px 5px #0c59cf;
+}
+
+h2 {
+  color: white;
+  font-family: 'Alegreya Sans SC';
+  font-size: 30px;
+}
+
+h3 {
+  color: white;
+  font-size: 22px;
+  margin-left: 30px;
+}
+
+/*hr needs different attributes set to black for diff browsers to appear correctly*/
+hr {
+  color: black;
+  border-color: black;
+  background-color: black;
+  height: 1.5px;
+  border: 0;
+}
+
+/* code for the topnav starts here*/
+ .topnav {
+    background-color: #232323;
+    overflow: hidden;
+    list-style-type: none;
+    position: sticky;
+    border-bottom: solid 2px black;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a:not(.cart) {
+    float: left;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 36px;
+    text-decoration: none;
+    font-size: 17px;
+    border:  1px solid black;
+    margin-top: 10px;
+    border-bottom: 0px;
+  }
+  
+  .topnav a:not(.cart):hover { /*the not(.cart) part here is to exclude the cart link from this styling*/
+    box-shadow: inset 0 0 12px white;
+    text-shadow: 1px 1px 10px white;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a:not(.cart).active {
+   color: black;
+   background-image: linear-gradient(#444444, #777777);
+  }
+
+  /* makes an element go all jaggedy just thought it was cool to keep
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  */
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  } 
+
+  /* for responsive layout */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav h1 {
+      float: none;
+      width: 70%;
+      margin: auto;
+    }
+  }
+  
+/*styling the signup and login buttons in topnav*/
+  .topButton {
+    margin-left: 4%;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: #444444;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px black;
+    font-family: 'Alegreya Sans SC';
+  }
+  
+  .topButton:hover {background-color: #313131}
+  
+  .topButton:active {
+    background-color: #444444;
+    box-shadow: 0 5px 10px #000;
+    transform: translateY(4px);
+  }
+
+  .topnav img {
+    margin-left:30px;
+    margin-top: -10px;
+    margin-bottom: -15px;
+  }
+
+  .cart {
+    display: inline-block;
+    color: white;
+  }
+
+   /*LOGIN POPUP*/
+   #triangleDiv{
+    width: 300px;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -25px;
+    margin-left: 65%;
+    filter: drop-shadow(2px 2px 5px black);
+  }
+  /*makes the login popup position itself better on resize*/
+  @media screen and (max-width:600px) {
+    #triangleDiv {
+      margin:auto;
+    }
+  }
+  
+  #triangle{
+    width: 0px;
+    height: 0px;
+    border: 20px solid black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    margin-left: 150px;
+        
+  }
+  #box{
+    width: 300px;
+    height: 250px;
+    background: #444444;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  #formAlign{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #loginForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #username{
+    margin-bottom: 30px;
+    height: 30px;
+    width: 210px;
+    border: transparent;
+    color: white;
+    background: #343434;
+    padding-left: 15px;
+    font-family: 'Alegreya Sans';
+    border: 1px solid black;
+  }
+  #password{
+    height: 30px;
+    width: 210px;
+    background: #343434;
+    border: transparent;
+    color: white;
+    padding-left: 15px;
+    font-family: 'Alegreya Sans';
+    border: 1px solid black;
+  }
+  #username, #password{
+    outline: none;
+  }
+
+  #loginFormBtn{
+    margin-top: 30px;
+    height: 35px;
+    width: 75px;
+    border: 1px solid BLACK;
+    filter: drop-shadow(1px 1px 5px black);
+    background: #444444;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Alegreya Sans SC';
+    font-size: 15px;
+  }
+    /*END OF LOGIN
+.
+.
+.
+END OF HEADER*/
+
+
+
+/* BODY CONTENT
+.
+.
+*/
+/*styles the arrow button menu*/
+a.btn{
+  height:40px;
+  line-height:40px;
+  vertical-align:middle;
+  text-align:center;
+  padding:0 10px;
+  color:black;
+  background-color:#606060;
+  position:relative;
+  display:inline-block;
+  text-decoration: none;
+}
+a.btn:after{
+  position:absolute;
+  right:-20px;
+  content:" ";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #606060;
+}
+
+/*for the active button*/
+a.btnactive{
+  height:40px;
+  line-height:40px;
+  vertical-align:middle;
+  text-align:center;
+  padding:0 10px;
+  color:black;
+  background-color:#aaaaaa;
+  position:relative;
+  display:inline-block;
+  text-decoration: none;
+}
+a.btnactive:after{
+  position:absolute;
+  right:-20px;
+  content:" ";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #aaaaaa;
+}
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+  }
+  .left {
+    width: 40%;
+    text-align: left;
+  }
+  .right {
+    width: 30%;
+    border: 1px solid black;
+    background-color: #141414;
+    margin-left: 10%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  /*styling and sizing each variation of input boxes*/
+  #fullsize {
+    background-color: #444444;
+    color: #c0c0c0;
+    padding: 7px;
+    width: 88%;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+  }
+
+  #halfsize {
+    background-color: #444444;
+    color: #c0c0c0;
+    padding: 7px;
+    width: 40%;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+  }
+
+  #thirdsize {
+    background-color: #444444;
+    color: #c0c0c0;
+    padding: 7px;
+    width: 29%;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+  }
+
+ /*styles dropdown boxes*/
+  .dropdown {
+    margin-left: 30px;
+    display: inline-flex;
+    width: 24%;
+    background: #444;
+    border-color: #111111 #0a0a0a black;
+    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown:before {
+    border-bottom-color: #aaa;
+  }
+  
+  .dropdown:after {
+    border-top-color: #aaa;
+  }
+  
+  .dropdown .dropdown-select {
+    color: #aaa;
+    text-shadow: 0 1px black;
+    background: #444;  /* Fallback for IE 8 */
+  }
+  
+  .dropdown .dropdown-select:focus {
+    color: #ccc;
+  }
+  
+  .dropdown .dropdown-select > option {
+    background: #444;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  }
+
+  .dropdown-select {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 28px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #62717a;
+    text-shadow: 0 1px white;
+    background: #f2f2f2; /* Fallback for IE 8 */
+    background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  
+  .dropdown-select:focus {
+    z-index: 3;
+    width: 100%;
+    color: #394349;
+    outline: 2px solid #49aff2;
+    outline: 2px solid -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  
+  .dropdown-select > option {
+    margin: 3px;
+    padding: 6px 8px;
+    text-shadow: none;
+    background: #f2f2f2;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Fix for IE 8 putting the arrows behind the select element. */
+
+.lt-ie9 .dropdown {
+  z-index: 1;
+}
+
+.lt-ie9 .dropdown-select {
+  z-index: -1;
+}
+
+.lt-ie9 .dropdown-select:focus {
+  z-index: 3;
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+
+@-moz-document url-prefix() {
+  .dropdown-select {
+    padding-left: 6px;
+  }
+}
+
+/*container for product*/
+.productbox {
+  width: 150px;
+  height: 100px;
+  border: 1px solid black;
+  filter: drop-shadow(1px 1px 5px black);
+  margin: 1.5em;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+/*styling for the product information*/
+#productInfo {
+  display:inline-flex;
+  position:relative;
+  bottom:50px;
+  left:5%;
+  font-size: 18px;
+}
+#costs {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/*styling the next button on checkout*/
+.nextButton {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  background-color: #033076;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px black;
+  font-family: 'Alegreya Sans SC';
+  float: right;
+  position: relative;
+  top: 80px;
+  text-decoration: none;
+}
+
+.nextButton:active {
+  background-color: #1464f6;
+  box-shadow: 0 5px 10px #000;
+  transform: translateY(4px);
+}

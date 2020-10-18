@@ -1,0 +1,39 @@
+---
+layout: payment
+---
+<a href="../Cart/cart.html" class="btn" style="margin-top:30px;margin-left:30px;">Cart</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#payment.html" class="btnactive" style="margin-top:30px;">Information</a> &nbsp; &nbsp; &nbsp; &nbsp;  <a href="../Payment/payment2.html" class="btn" style="margin-top:30px">Payment</a>
+              <div class="row">
+                <div class="column left">
+                  <h2 style="margin-left:30px;margin-top: 40px;">Contact Information</h2>
+                  <input id="fullsize" placeholder="Email Address">
+                  <h3>Shipping Address</h3>
+                  <input id="halfsize" placeholder="First name"> <input id="halfsize" placeholder="Last name">
+                  <input id="fullsize" placeholder="Address">
+                  <input id="fullsize" placeholder="Address line 2">
+                  <input id="fullsize" placeholder="City">
+                  <div class="dropdown"">
+                    <select class="dropdown-select">
+                      <option value="0">Country</option>
+                      <option value="1">New Zealand</option> <!--other countries require complicated geosource databases-->
+                    </select>
+                  </div>
+                    <div class="dropdown">
+                      <select class="dropdown-select">
+                        <option value="0">Region</option>
+                        <option value="1">Nelson</option> <!--im not populating this list with every region in NZ-->
+                      </select></div> <input id="thirdsize" placeholder="Post Code">
+                      <input id="halfsize" placeholder="Phone">
+                    </div>
+
+              <div class="column right">
+                <div class="productbox"><img src="https://i.ibb.co/Qvy6QrD/image.png" width="150px" height="100px"></div>
+                <p id="productInfo">Gengar - Pokemon</p>
+                <p id="productInfo" style="margin-left:25px;">$75.00</p>
+                <hr style="width:100%;background-color: #606060;">
+                <p id="costs">Shipping</p> <p id="costs" style="float:right;">$4.99</p><br>
+                <p id="costs">Sub-Total</p><p id="costs" style="float:right;">$79.99</p><br>
+                <hr style="width:100%;background-color: #606060;"><br>
+                <p id="costs">Total</p><p id="costs" style="float:right;">$79.99</p><br>
+                <a href="payment2.html" class="nextButton">Next >></a>
+              </div>
+            </div>

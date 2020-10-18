@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Enter Information</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="payment.css">
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+        <link href=' http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <script src="payment.js" async defer></script>
+<!-- TOP NAV BAR  -->
+        <ul class="topnav" id="menu">
+          <h1 style="float:left;margin:0;padding-right:50px;">Shop Name</h1>
+          <a href="../index.html">Home</a>
+          <a href="../Products/products.html">Products</a>
+           <a href="../Shipping/shipping.html">Shipping & Returns</a>
+            <a href="../Contact/contact.html">Contact</a>
+<!-- SIGNUP LOGIN CART BUTTONS -->
+              <button class="topButton">Signup</button>
+               <button class="topButton" onclick="showLogin()">Login</button>
+              <div class="cart"><a href="../Cart/cart.html" class="cart"><img src="https://i.ibb.co/0DkxSzb/cart.png" style="width:40px;height:40px;transform:scaleX(-1);"></a><img src="https://icon-library.com/images/icon-1/icon-1-10.jpg" style="width:20px;height:20px;margin-left:-10px;margin-bottom:5px;transform:scaleZ(1)"></div>
+          </ul> 
+          <!-- HIDDEN LOGIN FORM -->
+               <div id="triangleDiv" style="display:none">
+                <span id="triangle"></span>
+                <div id="box">
+                
+                  <div id="formAlign">
+                    <form id="loginForm">
+                      <input id="username" placeholder="Username">
+                      <input id="password"type="password"placeholder="Password">
+                      <button id="loginFormBtn">Log in</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+<a href="../Cart/cart.html" class="btn" style="margin-top:30px;margin-left:30px;">Cart</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#payment.html" class="btnactive" style="margin-top:30px;">Information</a> &nbsp; &nbsp; &nbsp; &nbsp;  <a href="../Payment/payment2.html" class="btn" style="margin-top:30px">Payment</a>
+              <div class="row">
+                <div class="column left">
+                  <h2 style="margin-left:30px;margin-top: 40px;">Contact Information</h2>
+                  <input id="fullsize" placeholder="Email Address">
+                  <h3>Shipping Address</h3>
+                  <input id="halfsize" placeholder="First name"> <input id="halfsize" placeholder="Last name">
+                  <input id="fullsize" placeholder="Address">
+                  <input id="fullsize" placeholder="Address line 2">
+                  <input id="fullsize" placeholder="City">
+                  <div class="dropdown"">
+                    <select class="dropdown-select">
+                      <option value="0">Country</option>
+                      <option value="1">New Zealand</option> <!--other countries require complicated geosource databases-->
+                    </select>
+                  </div>
+                    <div class="dropdown">
+                      <select class="dropdown-select">
+                        <option value="0">Region</option>
+                        <option value="1">Nelson</option> <!--im not populating this list with every region in NZ-->
+                      </select></div> <input id="thirdsize" placeholder="Post Code">
+                      <input id="halfsize" placeholder="Phone">
+                    </div>
+
+              <div class="column right">
+                <div class="productbox"><img src="https://i.ibb.co/Qvy6QrD/image.png" width="150px" height="100px"></div>
+                <p id="productInfo">Gengar - Pokemon</p>
+                <p id="productInfo" style="margin-left:25px;">$75.00</p>
+                <hr style="width:100%;background-color: #606060;">
+                <p id="costs">Shipping</p> <p id="costs" style="float:right;">$4.99</p><br>
+                <p id="costs">Sub-Total</p><p id="costs" style="float:right;">$79.99</p><br>
+                <hr style="width:100%;background-color: #606060;"><br>
+                <p id="costs">Total</p><p id="costs" style="float:right;">$79.99</p><br>
+                <a href="payment2.html" class="nextButton">Next >></a>
+              </div>
+            </div>
+
+    </body>
+</html>
